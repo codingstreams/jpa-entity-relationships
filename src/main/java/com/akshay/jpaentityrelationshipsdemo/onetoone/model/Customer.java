@@ -1,4 +1,4 @@
-package com.akshay.jpaentityrelationshipsdemo.model;
+package com.akshay.jpaentityrelationshipsdemo.onetoone.model;
 
 import jakarta.persistence.*;
 
@@ -8,6 +8,9 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
+
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_address_id")
     private Address address;

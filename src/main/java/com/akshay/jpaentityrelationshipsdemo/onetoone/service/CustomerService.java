@@ -1,7 +1,7 @@
-package com.akshay.jpaentityrelationshipsdemo.service;
+package com.akshay.jpaentityrelationshipsdemo.onetoone.service;
 
-import com.akshay.jpaentityrelationshipsdemo.model.Customer;
-import com.akshay.jpaentityrelationshipsdemo.repo.CustomerRepository;
+import com.akshay.jpaentityrelationshipsdemo.onetoone.model.Customer;
+import com.akshay.jpaentityrelationshipsdemo.onetoone.repo.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

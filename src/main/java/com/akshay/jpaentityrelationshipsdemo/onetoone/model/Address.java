@@ -1,4 +1,4 @@
-package com.akshay.jpaentityrelationshipsdemo.model;
+package com.akshay.jpaentityrelationshipsdemo.onetoone.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
