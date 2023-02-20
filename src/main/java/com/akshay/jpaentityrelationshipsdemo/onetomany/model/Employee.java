@@ -1,5 +1,4 @@
 package com.akshay.jpaentityrelationshipsdemo.onetomany.model;
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 

@@ -1,21 +1,19 @@
-package com.akshay.jpaentityrelationshipsdemo.onetomany.model;
+package com.akshay.jpaentityrelationshipsdemo.manytomany.model;
+
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
-
 import java.util.List;
 
-
 @Entity
-public class Department {
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @JsonManagedReference
-    @OneToMany(mappedBy = "department")
-    private List<Employee> employeeList;
+    @ManyToMany(mappedBy = "courseList")
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+    private List<Student> studentList;
 
     public Integer getId() {
         return id;
@@ -33,11 +31,12 @@ public class Department {
         this.name = name;
     }
 
-    public List<Employee> getEmployeeList() {
-        return employeeList;
+    public List<Student> getStudentList() {
+        return studentList;
     }
 
-    public void setEmployeeList(List<Employee> employeeList) {
-        this.employeeList = employeeList;
+    public void setStudentList(List<Student> studentList) {
+        this.studentList = studentList;
     }
+
 }
